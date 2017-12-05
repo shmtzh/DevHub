@@ -1,7 +1,1 @@
-import flask
-app = flask.Flask(__name__)
-
-@app.route("/")
-def index():
-    #do whatevr here...
-    return "Hello Heruko"
+web: gunicorn main_app:app --log-file -
